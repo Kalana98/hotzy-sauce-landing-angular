@@ -2,12 +2,13 @@ import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-hotzy-landing',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './hotzy-landing.html',
   styleUrls: ['./hotzy-landing.scss']
 })
@@ -20,31 +21,62 @@ export class HotzyLandingComponent implements AfterViewInit {
 
   // 🔥 PRODUCTS (YOUR REAL DATA)
   products = [
-    {
-      name: 'Snake Bite',
-      level: '🔥🔥🔥🔥🔥 Spiciest',
-      desc: 'Extreme heat for serious chili warriors.',
-      img: 'assets/sauces/snake-bite.png'
-    },
-    {
-      name: 'Scorpion Sauce',
-      level: '🔥🔥🔥🔥 2nd Spiciest',
-      desc: 'Deadly scorpion heat with rich flavor.',
-      img: 'assets/sauces/scorpion.png'
-    },
+  {
+    id: 'snake-bite',
+    name: 'Snake Bite',
+    level: '🔥🔥🔥🔥🔥 Spiciest',
+    desc: 'Extreme heat for serious chili warriors.',
+    img: 'assets/sauces/snake-bite.png'
+  },
+  {
+    id: 'scorpion-sauce',
+    name: 'Scorpion Sauce',
+    level: '🔥🔥🔥🔥 2nd Spiciest',
+    desc: 'Deadly scorpion heat with rich flavor.',
+    img: 'assets/sauces/scorpion.png'
+  },
+  {
+    id: 'nak-muay',
+    name: 'Nak Muay Asian',
+    level: '🌶️ Asian Series',
+    desc: 'Authentic Asian-inspired spicy sauce.',
+    img: 'assets/sauces/naumow.png'
+  },
+  {
+    id: 'teriyaki-fire',
+    name: 'Teriyaki Fire',
+    level: '🌶️ Asian Series',
+    desc: 'Sweet teriyaki meets Hotzy heat.',
+    img: 'assets/sauces/teriyaki.png'
+  }
+];
+
+    team = [
       {
-      name: 'Nak Muay Asian',
-      level: '🌶️ Asian Series',
-      desc: 'Authentic Asian-inspired spicy sauce.',
-      img: 'assets/sauces/naumow.png'
-    },
-    {
-      name: 'Teriyaki Fire',
-      level: '🌶️ Asian Series',
-      desc: 'Sweet teriyaki meets Hotzy heat.',
-      img: 'assets/sauces/teriyaki.png'
-    }
-  ];
+        name: 'Ayesha Perera',
+        role: 'Founder & Flavor Creator',
+        bio: 'Crafts the signature blends and tests every batch.',
+        img: 'assets/team/1.jpg'
+      },
+      {
+        name: 'Kasun Silva',
+        role: 'Operations',
+        bio: 'Handles production flow and quality checks.',
+        img: 'assets/team/2.jpg'
+      },
+      {
+        name: 'Nimali Fernando',
+        role: 'Design & Branding',
+        bio: 'Creates packaging, visuals, and brand identity.',
+        img: 'assets/team/3.jpg'
+      },
+      {
+        name: 'Ruwan Jayasinghe',
+        role: 'Marketing',
+        bio: 'Runs campaigns and community growth.',
+        img: 'assets/team/4.jpg'
+      }
+    ];
 
   @ViewChildren('revealEl') revealEls!: QueryList<ElementRef>;
 

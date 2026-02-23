@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HotzyLandingComponent } from './components/hotzy-landing/hotzy-landing'; 
+import { HotzyLandingComponent } from './components/hotzy-landing/hotzy-landing';
 
 @Component({
   selector: 'app-root',
