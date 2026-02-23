@@ -1,0 +1,472 @@
+:host {
+  display: block;
+  font-family: Inter, sans-serif;
+}
+
+/* ================= GLOBAL DARK FIX ================= */
+
+/* force whole app dark */
+:host ::ng-deep body {
+  background: #000000;
+  color: #f2f2f2;
+}
+
+/* THEME */
+.page {
+  background: #000000;
+  color: #f2f2f2; /* ✅ FIXED (was black) */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 60px;
+
+  background: rgba(0, 0, 0, 0.65);  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 140, 0, 0.25);
+
+  /* ⭐ NEW — depth shadow */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px rgba(255, 255, 255, 0.04);
+
+  transition: all 0.3s ease;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+
+  transition: all 0.3s ease;
+}
+
+/* ⭐ sexy hover */
+.logo img:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.6));
+}
+
+nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #f0f0f0;
+  opacity: 0.85;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* underline animation */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #ff8c00, #ff3d00);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.cta {
+  background: linear-gradient(135deg, #ff8c00, #ff3d00);
+  border: none;
+  padding: 11px 22px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+
+  transition: all 0.25s ease;
+
+  /* ⭐ glow */
+  box-shadow:
+    0 6px 18px rgba(255, 61, 0, 0.35);
+}
+
+/* hover */
+.cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 10px 26px rgba(255, 61, 0, 0.55);
+}
+
+/* click feel */
+.cta:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px 160px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #070707, #0e0300);
+}
+
+.hero-content {
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.hero-content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  background: linear-gradient(90deg, #ffb74d, #ff3d00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  max-width: 620px;
+  margin: auto;
+  color: #bdbdbd;
+}
+
+/* buttons */
+
+.hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: linear-gradient(135deg, #ff8c00, #ff3d00);
+  border: none;
+  padding: 14px 26px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #ff8c00;
+  padding: 14px 26px;
+  border-radius: 12px;
+  color: #ffb74d;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.secondary:hover {
+  background: rgba(255, 140, 0, 0.08);
+}
+
+/* ================= FLOATING BOTTLE ================= */
+.bottle-float {
+  position: absolute;
+  padding: 5% 2% 5% 15%;
+  right: 8%;
+  top: 50%;
+
+  width: 150px;        /* control size ONLY with width */
+  height: auto;
+
+  transform: translateY(-50%);
+  object-fit: contain;
+
+  filter: drop-shadow(0 25px 50px rgba(255, 87, 34, 0.35));
+
+  animation: floatBottle 4s ease-in-out infinite;
+
+  /* ⭐ IMPORTANT — prevent cropping */
+  pointer-events: none;
+}
+
+.bottle-float img{
+    width: 15rem;
+    height: auto;
+    
+}
+
+@keyframes floatBottle {
+  0%, 100% {
+    transform: translateY(-50%) translateY(0);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-15px);
+  }
+}
+
+/* ================= PARTICLES ================= */
+
+/* ================= PRODUCTS ================= */
+
+.products {
+  padding: 110px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 87, 34, 0.08),
+      transparent 60%
+    ),
+    #000000;
+  position: relative;
+}
+
+.products h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #ffb74d, #ff3d00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #000000;
+}
+
+/* CARD */
+
+.product-card {
+  background: linear-gradient(145deg, #0f0f0f, #050505);
+  border-radius: 20px;
+  padding: 30px 24px;
+  border: 1px solid rgba(255, 140, 0, 0.18);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+/* glow floor under bottle */
+
+.product-card::after {
+  content: '';
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 18px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 87, 34, 0.35),
+    transparent 70%
+  );
+  filter: blur(8px);
+  opacity: 0.6;
+  transition: 0.35s ease;
+}
+
+/* HOVER */
+
+.product-card:hover {
+  transform: translateY(-14px) scale(1.02);
+  border-color: rgba(255, 140, 0, 0.5);
+  box-shadow:
+    0 30px 80px rgba(255, 87, 34, 0.25),
+    0 0 60px rgba(255, 140, 0, 0.12);
+}
+
+.product-card:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.25);
+}
+
+/* ================= BOTTLE ================= */
+
+.product-img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  transition: transform 0.35s ease, filter 0.35s ease;
+
+  /* realistic shadow */
+  filter:
+    drop-shadow(0 25px 35px rgba(0, 0, 0, 0.95))
+    drop-shadow(0 0 20px rgba(255, 87, 34, 0.25));
+}
+
+/* bottle hover lift */
+
+.product-card:hover .product-img {
+  transform: translateY(-8px) scale(1.06);
+  filter:
+    drop-shadow(0 35px 50px rgba(0, 0, 0, 1))
+    drop-shadow(0 0 28px rgba(255, 87, 34, 0.35));
+}
+
+/* ================= TEXT ================= */
+
+.product-card h3 {
+  margin: 6px 0;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+
+.heat {
+  color: #ffb74d;
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.product-card p {
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* button inside card */
+
+.product-card button {
+  margin-top: 14px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 140, 0, 0.5);
+  background: transparent;
+  color: #ffb74d;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.product-card button:hover {
+  background: rgba(255, 140, 0, 0.12);
+  color: #ffffff;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 110px 20px;
+  text-align: center;
+  background: #050505;
+  color: #e0e0e0;
+}
+
+.about h2 {
+  margin-bottom: 16px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  padding: 110px 20px;
+  text-align: center;
+  background: #000000;
+  color: #e0e0e0;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  padding: 32px;
+  border-top: 1px solid rgba(255, 140, 0, 0.2);
+  color: #888;
+  background: #000000;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  nav {
+    display: none; /* later we can add hamburger */
+  }
+
+  .logo img {
+    height: 38px;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .bottle-float {
+    display: none;
+  }
+
+  .products {
+    padding: 90px 16px;
+  }
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 90px 20px;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid rgba(255, 140, 0, 0.2);
+  color: #888;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .bottle-float {
+    display: none;
+  }
+}

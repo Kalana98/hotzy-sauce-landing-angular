@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { HotzyLandingComponent } from './components/hotzy-landing/hotzy-landing'; 
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [HotzyLandingComponent],
+  template: `<app-hotzy-landing></app-hotzy-landing>`
 })
-export class App {
-  protected readonly title = signal('hotzy-web');
-}
+export class AppComponent {}

@@ -1,0 +1,83 @@
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+        <img src="assets/logo.jpg" alt="hotzy logo">
+    </div>
+
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cta">Buy Now</button>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <!-- spicy particles -->
+    <div class="particles">
+      <span *ngFor="let p of particleArray"></span>
+    </div>
+
+    <div class="hero-content" #revealEl>
+      <h1>Turn Up The Heat 🌶️</h1>
+      <p>
+        Premium handcrafted hot sauces made to ignite your taste buds.
+        Bold flavor. Real heat. Pure Hotzy.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="primary">Shop Sauces</button>
+        <button class="secondary">Explore Flavors</button>
+      </div>
+        </div>
+
+    <!-- floating bottle visual -->
+    <div class="bottle-float">
+        <img src="assets/bottle.png" alt="floating bottle">
+    </div>
+
+    <div class="hero-glow"></div>
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products" #revealEl>
+    <h2>🔥 Our Signature Sauces</h2>
+
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let p of products">
+        <img class="product-img" [src]="p.img" [alt]="p.name" />
+        <h3>{{ p.name }}</h3>
+        <div class="heat">{{ p.level }}</div>
+        <p>{{ p.desc }}</p>
+        <button>View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about" #revealEl>
+    <h2>Why Hotzy?</h2>
+    <p>
+      We craft bold, fiery sauces using premium natural ingredients.
+      No shortcuts. No artificial nonsense. Just pure heat and flavor.
+    </p>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" #revealEl>
+    <h2>Get In Touch</h2>
+    <p>Email: hello@hotzy.com</p>
+  </section>
+
+
+  <footer class="footer">
+    © 2026 Hotzy Sauce Company. All rights reserved.
+  </footer>
+
