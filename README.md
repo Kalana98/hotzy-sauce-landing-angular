@@ -5,12 +5,6 @@ Hotzy showcases bold design, smooth UI interactions, and a premium product prese
 
 ---
 
-## 🚀 Live Preview
-
-🔗 _Add your deployed link here (Netlify / Vercel / GitHub Pages)_
-
----
-
 ## ✨ Features
 
 - 🔥 Modern dark premium UI  
