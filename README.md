@@ -62,16 +62,18 @@ Hotzy showcases bold design, smooth UI interactions, and a premium product prese
 ---
 
 ## 📂 Project Structure
+```
 hotzy-web/
 ├── src/
-│ ├── app/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Page-level views
-│ │ └── services/ # Angular services
-│ ├── assets/ # Images, fonts, static files
-│ └── styles.scss # Global styles
-├── angular.json # Angular configuration
-└── package.json # Dependencies and scripts
+│   ├── app/
+│   │   ├── components/   # Reusable UI components
+│   │   ├── pages/        # Page-level views
+│   │   └── services/     # Angular services
+│   ├── assets/           # Images, fonts, static files
+│   └── styles.scss       # Global styles
+├── angular.json          # Angular configuration
+└── package.json          # Dependencies and scripts
+```
 
 ---
 
