@@ -26,8 +26,6 @@ Hotzy showcases bold design, smooth UI interactions, and a premium product prese
 
 ## 🖼️ Screenshots
 
-> ⚠️ Create a folder named **screenshots** in your repo and add your images with these names.
-
 ### 🏠 Hero Section
 ![Hero](./screenshots/hero.png)
 
