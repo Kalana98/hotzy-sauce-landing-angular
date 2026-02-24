@@ -53,25 +53,25 @@ export class HotzyLandingComponent implements AfterViewInit {
 
     team = [
       {
-        name: 'Ayesha Perera',
+        name: 'Chamath Perera',
         role: 'Founder & Flavor Creator',
         bio: 'Crafts the signature blends and tests every batch.',
         img: 'assets/team/1.jpg'
       },
       {
-        name: 'Kasun Silva',
+        name: 'Amali Perera',
         role: 'Operations',
         bio: 'Handles production flow and quality checks.',
         img: 'assets/team/2.jpg'
       },
       {
-        name: 'Nimali Fernando',
+        name: 'Ayanthi Fernando',
         role: 'Design & Branding',
         bio: 'Creates packaging, visuals, and brand identity.',
         img: 'assets/team/3.jpg'
       },
       {
-        name: 'Ruwan Jayasinghe',
+        name: 'Sansala Jayasinghe',
         role: 'Marketing',
         bio: 'Runs campaigns and community growth.',
         img: 'assets/team/4.jpg'
