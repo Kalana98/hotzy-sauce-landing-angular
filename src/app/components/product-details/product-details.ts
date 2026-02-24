@@ -10,6 +10,7 @@ interface Sauce {
   fullDesc: string;
   ingredients: string[];
   price: number;
+  category: string;
 }
 
 @Component({
@@ -26,39 +27,43 @@ export class ProductDetailsComponent {
   private allProducts: Sauce[] = [
     {
       id: 'snake-bite',
-      name: 'Scorpion Sting',
+      name: 'Snake Bite Hot Sauce',
       level: 4,
       img: 'assets/sauces/snake-bite.png',
-      fullDesc: 'A bold smoky sauce with intense heat and deep flavor.',
-      ingredients: ['Chili', 'Vinegar', 'Garlic', 'Salt'],
-      price: 12.99
+      fullDesc: 'Snake Bite is Hotzy’s ultimate heat experience. Crafted with juicy pineapple and powerful chilies, this sauce delivers a bold tropical sweetness followed by a serious, lingering burn. Designed for true heat lovers who crave intensity without sacrificing flavor.',
+      ingredients: ['Chili', 'pineapple'],
+      price: 990,
+      category: 'Spicy'
     },
     {
       id: 'scorpion-sauce',
-      name: 'Mango Blaze',
+      name: 'Scorpion Sting Hot Sauce',
       level: 3,
       img: 'assets/sauces/scorpion.png',
-      fullDesc: 'Sweet mango meets clean chili heat for a smooth burn.',
-      ingredients: ['Mango', 'Chili', 'Sugar', 'Vinegar'],
-      price: 10.99
+      fullDesc: 'Scorpion Sting balances rich mango sweetness with a clean, rising chili heat. Slightly gentler than Snake Bite but still boldly spicy, this sauce brings a vibrant fruity profile with a confident sting that keeps you coming back for more.',
+      ingredients: ['Mango', 'Chili'],
+      price: 900,
+      category: 'Spicy'
     },
     {
       id: 'teriyaki-fire',
       name: 'Teriyaki Fire',
       level: 2,
       img: 'assets/sauces/teriyaki.png',
-      fullDesc: 'Teriyaki sweetness with a gentle spicy finish.',
+      fullDesc: 'Our Teriyaki sauce brings authentic Asian-style sweetness with a soft chili finish. Perfectly balanced and family-friendly, it adds a rich glaze and subtle heat to chicken, seafood, noodles, and stir-fried favorites.',
       ingredients: ['Soy', 'Sugar', 'Garlic', 'Chili'],
-      price: 9.99
+      price: 990,
+      category: 'Asian'
     },
     {
       id: 'nak-muay',
       name: 'Nak Muay Heat',
       level: 3,
       img: 'assets/sauces/naumow.png',
-      fullDesc: 'Balanced Thai-style heat with deep savory notes.',
+      fullDesc: 'Inspired by classic Asian flavor profiles, Naumawk delivers a smooth, savory experience with gentle warmth. This versatile sauce enhances noodles, rice, stir-fries, and grilled dishes with its rich umami character and balanced spice.',
       ingredients: ['Chili', 'Fish Sauce', 'Garlic'],
-      price: 11.49
+      price: 900,
+      category: 'Asian'
     }
   ];
 

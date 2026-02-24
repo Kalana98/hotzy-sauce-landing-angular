@@ -272,10 +272,79 @@
   color: #ffffff;
 }
 
+/* ================= OUR STORY ================= */
+
+.story {
+  padding: 100px 20px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 140, 0, 0.12), transparent 55%),
+    #050505;
+  color: #fff;
+}
+
+.story-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-title {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+  color: #ff8c00;
+}
+
+/* content */
+
+.story-content {
+  text-align: left;
+}
+
+.story-content p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  margin-bottom: 22px;
+  font-size: 16px;
+}
+
+/* highlight line */
+
+.story-highlight {
+  margin-top: 34px;
+  font-weight: 800;
+  font-size: 18px;
+  color: #ffd166;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+/* signature */
+
+.story-sign {
+  margin-top: 26px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+  .story-title {
+    font-size: 32px;
+  }
+
+  .story-content {
+    text-align: left;
+  }
+}
+
 /* ================= ABOUT ================= */
 
 .about {
-  padding: 110px 20px;
+  padding: 10px 20px;
   text-align: center;
   background: linear-gradient(90deg, #190600, #000000, #000000, #000000, #190600);
   color: #e0e0e0;
@@ -284,11 +353,112 @@
 
 /* ================= CONTACT ================= */
 
+/* ================= CONTACT SECTION ================= */
+
 .contact {
-  padding: 110px 20px;
+  padding: 100px 20px 90px;
+ 
+  color: #fff;
   text-align: center;
-  background: linear-gradient(90deg, #190600, #000000, #000000, #000000, #190600);
-  color: #e0e0e0;
+}
+
+/* container */
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* title */
+
+.contact-title {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 60px;
+  font-size: 16px;
+}
+
+/* grid */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+/* card */
+
+.contact-card {
+  background: linear-gradient(145deg, #140700, #0a0a0a);
+  border-radius: 18px;
+  padding: 22px 20px; /* ⭐ reduced padding */
+  text-align: center;
+
+  border: 1px solid rgba(255, 140, 0, 0.18);
+
+  transition: 0.25s ease;
+
+  /* ⭐ NEW — prevents giant empty cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 30px; /* ⭐ keeps them neat */
+  align-items: stretch;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 140, 0, 0.45);
+  box-shadow: 0 20px 50px rgba(255, 140, 0, 0.12);
+}
+
+.contact-card h3 {
+  color: #ff8c00;
+  margin-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+.contact-card p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* links */
+
+.contact-card a {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  color: #ff8c00;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
 }
 
 /* ================= FOOTER ================= */
