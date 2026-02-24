@@ -274,18 +274,34 @@
 
 /* ================= OUR STORY ================= */
 
+/* ================= OUR STORY ================= */
+
 .story {
+  position: relative;
   padding: 100px 20px;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 140, 0, 0.12), transparent 55%),
-    #050505;
   color: #fff;
+  overflow: hidden;
+  background: #050505;
 }
 
+/* 🔥 background image layer */
+.story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  // background: url("assets/story_bg.jpg") center/cover no-repeat;
+  background: url("/assets/story_bg.jpg") center/contain no-repeat;
+  opacity: 0.05; /* ⭐ adjust opacity here */
+  z-index: 0;
+}
+
+/* keep content above image */
 .story-container {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  z-index: 1;
 }
 
 .story-title {
