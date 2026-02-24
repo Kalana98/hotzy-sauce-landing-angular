@@ -5,3 +5,11 @@ html, body {
   padding: 0;
   background: linear-gradient(90deg, #190600, #000000, #000000, #000000, #190600);
 }
+
+h2{
+    font-size: 34px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #ffb74d, #ff3d00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { HotzyLandingComponent } from './components/hotzy-landing/hotzy-landing';
+import { RouterOutlet } from '@angular/router';
+import { NavBar } from './components/nav-bar/nav-bar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HotzyLandingComponent],
-  template: `<app-hotzy-landing></app-hotzy-landing>`
+  imports: [RouterOutlet, NavBar], // ⭐ REQUIRED
+  templateUrl: './app.component.html'
 })
 export class AppComponent {}

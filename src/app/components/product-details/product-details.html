@@ -1,1 +1,54 @@
-<p>product-details works!</p>
+
+<section class="details">
+
+  <!-- ⭐ IMPORTANT FIX -->
+  <div *ngIf="product as p; else notFound" class="details-card">
+
+    <div class="image-wrap">
+      <img [src]="p.img" [alt]="p.name" />
+    </div>
+
+    <div class="info">
+      <h1 class="title">{{ p.name }}</h1>
+
+      <!-- heat -->
+      <div class="heat">
+        <span class="label">Heat Level</span>
+        <div class="flames">
+          <span *ngFor="let _ of heatArray">🔥</span>
+        </div>
+      </div>
+
+      <!-- price + CTA -->
+      <div class="purchase">
+        <div class="price">${{ p.price }}</div>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+
+      <!-- description -->
+      <div class="section">
+        <h3>Description</h3>
+        <p class="desc">{{ p.fullDesc }}</p>
+      </div>
+
+      <!-- ingredients -->
+      <div class="section">
+        <h3>Ingredients</h3>
+        <ul class="ingredients-list">
+          <li *ngFor="let item of p.ingredients">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+      <a (click)="goBack()" class="back">← Back</a>
+
+  </div>
+
+  <ng-template #notFound>
+    <div class="not-found">
+      Product not found.
+    </div>
+  </ng-template>
+</section>

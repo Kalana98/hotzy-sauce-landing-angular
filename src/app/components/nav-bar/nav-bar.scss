@@ -1,0 +1,101 @@
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 60px;
+
+  background: rgba(0, 0, 0, 0.65);  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 140, 0, 0.25);
+
+  /* ⭐ NEW — depth shadow */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px rgba(255, 255, 255, 0.04);
+
+  transition: all 0.3s ease;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+
+  transition: all 0.3s ease;
+}
+
+/* ⭐ sexy hover */
+.logo img:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.6));
+}
+
+nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #f0f0f0;
+  opacity: 0.85;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* underline animation */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #ff8c00, #ff3d00);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.cta {
+  background: linear-gradient(135deg, #ff8c00, #ff3d00);
+  border: none;
+  padding: 11px 22px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+
+  transition: all 0.25s ease;
+
+  /* ⭐ glow */
+  box-shadow:
+    0 6px 18px rgba(255, 61, 0, 0.35);
+}
+
+/* hover */
+.cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 10px 26px rgba(255, 61, 0, 0.55);
+}
+
+/* click feel */
+.cta:active {
+  transform: translateY(-1px) scale(0.98);
+}
