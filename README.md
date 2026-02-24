@@ -1,59 +1,109 @@
-# HotzyWeb
+# 🌶️ Hotzy Sauce Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+A modern, responsive **hot sauce brand website** built with Angular.  
+Hotzy showcases bold design, smooth UI interactions, and a premium product presentation experience.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Live Preview
 
+🔗 _Add your deployed link here (Netlify / Vercel / GitHub Pages)_
+
+---
+
+## ✨ Features
+
+- 🔥 Modern dark premium UI  
+- 📱 Fully responsive design  
+- 🎯 Smooth section-based navigation  
+- 🛒 Product showcase with detail pages  
+- 👥 Team introduction section  
+- 📦 Order call-to-action section  
+- 📞 Contact information section  
+- ⚡ Fast and lightweight Angular frontend  
+
+---
+
+## 🖼️ Screenshots
+
+> ⚠️ Create a folder named **screenshots** in your repo and add your images with these names.
+
+### 🏠 Hero Section
+![Hero](./screenshots/hero.png)
+
+### ❓ Why Hotzy
+![Why Hotzy](./screenshots/why-hotzy.png)
+
+### 📖 Our Story
+![Our Story](./screenshots/our-story.png)
+
+### 🌶️ Signature Sauces
+![Products](./screenshots/products.png)
+
+### 🛒 Order Online
+![Order](./screenshots/order.png)
+
+### 👥 Our Team
+![Team](./screenshots/team.png)
+
+### 📞 Contact Section
+![Contact](./screenshots/contact.png)
+
+### 🧴 Product Details
+![Product Details](./screenshots/product-details.png)
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Angular (Standalone Components)
+- TypeScript
+- SCSS
+- HTML5
+
+### Design
+- Responsive Flexbox & Grid
+- Gradient branding
+- Modern dark theme UI
+
+---
+
+## 📂 Project Structure
+hotzy-web/
+├── src/
+│ ├── app/
+│ │ ├── components/ # Reusable UI components
+│ │ ├── pages/ # Page-level views
+│ │ └── services/ # Angular services
+│ ├── assets/ # Images, fonts, static files
+│ └── styles.scss # Global styles
+├── angular.json # Angular configuration
+└── package.json # Dependencies and scripts
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Kalana98/hotzy-web.git
+cd hotzy-web
+```
+
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+### 🌐 Visit
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
