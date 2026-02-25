@@ -17,7 +17,6 @@
 
   border-bottom: 1px solid rgba(255, 140, 0, 0.25);
 
-  /* ⭐ NEW — depth shadow */
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.35),
     inset 0 1px rgba(255, 255, 255, 0.04);
@@ -35,7 +34,6 @@
   cursor: pointer;
 }
 
-/* ⭐ sexy hover */
 .logo img:hover {
   transform: scale(1.06);
   filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.6));
@@ -57,7 +55,6 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* underline animation */
 nav a::after {
   content: '';
   position: absolute;
@@ -84,19 +81,16 @@ nav a:hover::after {
 
   transition: all 0.25s ease;
 
-  /* ⭐ glow */
   box-shadow:
     0 6px 18px rgba(255, 61, 0, 0.35);
 }
 
-/* hover */
 .cta:hover {
   transform: translateY(-3px) scale(1.03);
   box-shadow:
     0 10px 26px rgba(255, 61, 0, 0.55);
 }
 
-/* click feel */
 .cta:active {
   transform: translateY(-1px) scale(0.98);
 }

@@ -6,7 +6,6 @@
   position: relative;
   color: #fff;
 
-  /* premium dark + orange edges */
   background:
     radial-gradient(circle at 15% 50%, rgba(255, 140, 0, 0.18), transparent 55%),
     radial-gradient(circle at 85% 50%, rgba(255, 61, 0, 0.14), transparent 55%),
@@ -22,7 +21,7 @@
   grid-template-columns: 440px 1fr;
   gap: 70px;
   align-items: center;
-  position: relative; /* for back button positioning if needed */
+  position: relative; 
 }
 
 /* ================= BACK BUTTON ================= */
@@ -33,7 +32,7 @@
   justify-content: center;
   gap: 8px;
 
-  margin-top: 28px;      /* ⭐ pushes it below content */
+  margin-top: 28px;     
   align-self: center;
 
   color: #ff8c00;
@@ -78,7 +77,6 @@
     inset 0 0 0 1px rgba(255, 140, 0, 0.12);
 }
 
-/* subtle premium highlight */
 .image-wrap::before {
   content: "";
   position: absolute;
@@ -91,7 +89,6 @@
   pointer-events: none;
 }
 
-/* orange glow */
 .image-wrap::after {
   content: "";
   position: absolute;
@@ -135,7 +132,6 @@
   letter-spacing: 0.6px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
-  /* elegant orange highlight */
   text-shadow: 0 10px 40px rgba(255, 140, 0, 0.18);
 }
 
@@ -193,7 +189,7 @@
 .price {
   font-size: 30px;
   font-weight: 900;
-  color: #ffe45c; /* warm premium yellow */
+  color: #ffe45c;
   letter-spacing: 0.3px;
   text-shadow: 0 10px 30px rgba(255, 228, 92, 0.12);
 }

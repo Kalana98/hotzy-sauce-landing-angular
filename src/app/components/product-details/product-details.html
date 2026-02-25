@@ -1,7 +1,6 @@
 
 <section class="details">
 
-  <!-- ⭐ IMPORTANT FIX -->
   <div *ngIf="product as p; else notFound" class="details-card">
 
     <div class="image-wrap">
@@ -11,12 +10,10 @@
     <div class="info">
       <h1 class="title">{{ p.name }}</h1>
 
-      <!-- category -->
       <div class="section">
         <h3>Category : {{ p.category }}</h3>
       </div>
 
-      <!-- heat -->
       <div class="heat">
         <h3>Heat Level</h3>
         <div class="flames">
@@ -24,19 +21,16 @@
         </div>
       </div>
 
-      <!-- price + CTA -->
       <div class="purchase">
         <div class="price">Rs {{ p.price }} /-</div>
         <button class="buy-btn">Add to Cart</button>
       </div>
 
-      <!-- description -->
       <div class="section">
         <h3>Description</h3>
         <p class="desc">{{ p.fullDesc }}</p>
       </div>
 
-      <!-- ingredients -->
       <div class="section">
         <h3>Ingredients</h3>
         <ul class="ingredients-list">
