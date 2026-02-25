@@ -5,16 +5,14 @@
 
 /* ================= GLOBAL DARK FIX ================= */
 
-/* force whole app dark */
 :host ::ng-deep body {
   background: #000000;
   color: #f2f2f2;
 }
 
-/* THEME */
 .page {
   background: #000000;
-  color: #f2f2f2; /* ✅ FIXED (was black) */
+  color: #f2f2f2; 
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -51,8 +49,6 @@
   margin: auto;
   color: #bdbdbd;
 }
-
-/* buttons */
 
 .hero-buttons {
   margin-top: 32px;
@@ -98,7 +94,7 @@
   right: 8%;
   top: 50%;
 
-  width: 150px;        /* control size ONLY with width */
+  width: 150px;       
   height: auto;
 
   transform: translateY(-50%);
@@ -108,7 +104,6 @@
 
   animation: floatBottle 4s ease-in-out infinite;
 
-  /* ⭐ IMPORTANT — prevent cropping */
   pointer-events: none;
 }
 
@@ -127,25 +122,12 @@
   }
 }
 
-/* ================= PARTICLES ================= */
-
 /* ================= PRODUCTS ================= */
 
 .products {
-  // padding: 60px 20px;
   text-align: center;
-  // background:
-  //   radial-gradient(
-  //     circle at 50% 0%,
-  //     rgba(255, 87, 34, 0.08),
-  //     transparent 60%
-  //   ),
-  //   #000000;
   position: relative;
 }
-
-
-/* GRID */
 
 .product-grid {
   display: grid;
@@ -155,8 +137,6 @@
   margin: auto;
   background-color: #000000;
 }
-
-/* CARD */
 
 .product-card {
   background: linear-gradient(145deg, #0f0f0f, #050505);
@@ -169,8 +149,6 @@
   backdrop-filter: blur(6px);
   cursor: pointer;
 }
-
-/* glow floor under bottle */
 
 .product-card::after {
   content: '';
@@ -189,8 +167,6 @@
   opacity: 0.6;
   transition: 0.35s ease;
 }
-
-/* HOVER */
 
 .product-card:hover {
   transform: translateY(-14px) scale(1.02);
@@ -218,13 +194,10 @@
 
   transition: transform 0.35s ease, filter 0.35s ease;
 
-  /* realistic shadow */
   filter:
     drop-shadow(0 25px 35px rgba(0, 0, 0, 0.95))
     drop-shadow(0 0 20px rgba(255, 87, 34, 0.25));
 }
-
-/* bottle hover lift */
 
 .product-card:hover .product-img {
   transform: translateY(-8px) scale(1.06);
@@ -232,8 +205,6 @@
     drop-shadow(0 35px 50px rgba(0, 0, 0, 1))
     drop-shadow(0 0 28px rgba(255, 87, 34, 0.35));
 }
-
-/* ================= TEXT ================= */
 
 .product-card h3 {
   margin: 6px 0;
@@ -254,8 +225,6 @@
   line-height: 1.5;
 }
 
-/* button inside card */
-
 .product-card button {
   margin-top: 14px;
   padding: 8px 16px;
@@ -274,8 +243,6 @@
 
 /* ================= OUR STORY ================= */
 
-/* ================= OUR STORY ================= */
-
 .story {
   position: relative;
   padding: 100px 20px;
@@ -284,18 +251,15 @@
   background: #050505;
 }
 
-/* 🔥 background image layer */
 .story::before {
   content: "";
   position: absolute;
   inset: 0;
-  // background: url("assets/story_bg.jpg") center/cover no-repeat;
   background: url("/assets/story_bg.jpg") center/contain no-repeat;
-  opacity: 0.05; /* ⭐ adjust opacity here */
+  opacity: 0.05; 
   z-index: 0;
 }
 
-/* keep content above image */
 .story-container {
   position: relative;
   max-width: 900px;
@@ -312,8 +276,6 @@
   color: #ff8c00;
 }
 
-/* content */
-
 .story-content {
   text-align: left;
 }
@@ -325,8 +287,6 @@
   font-size: 16px;
 }
 
-/* highlight line */
-
 .story-highlight {
   margin-top: 34px;
   font-weight: 800;
@@ -335,8 +295,6 @@
   text-align: center;
   letter-spacing: 0.4px;
 }
-
-/* signature */
 
 .story-sign {
   margin-top: 26px;
@@ -366,9 +324,6 @@
   color: #e0e0e0;
 }
 
-
-/* ================= CONTACT ================= */
-
 /* ================= CONTACT SECTION ================= */
 
 .contact {
@@ -378,14 +333,10 @@
   text-align: center;
 }
 
-/* container */
-
 .contact-container {
   max-width: 1100px;
   margin: 0 auto;
 }
-
-/* title */
 
 .contact-title {
   font-size: 40px;
@@ -400,31 +351,26 @@
   font-size: 16px;
 }
 
-/* grid */
-
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 26px;
 }
 
-/* card */
-
 .contact-card {
   background: linear-gradient(145deg, #140700, #0a0a0a);
   border-radius: 18px;
-  padding: 22px 20px; /* ⭐ reduced padding */
+  padding: 22px 20px; 
   text-align: center;
 
   border: 1px solid rgba(255, 140, 0, 0.18);
 
   transition: 0.25s ease;
 
-  /* ⭐ NEW — prevents giant empty cards */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 30px; /* ⭐ keeps them neat */
+  min-height: 30px; 
   align-items: stretch;
 }
 
@@ -446,8 +392,6 @@
   line-height: 1.6;
   font-size: 15px;
 }
-
-/* links */
 
 .contact-card a {
   color: #ffd166;
@@ -493,7 +437,7 @@
   }
 
   nav {
-    display: none; /* later we can add hamburger */
+    display: none; 
   }
 
   .logo img {
