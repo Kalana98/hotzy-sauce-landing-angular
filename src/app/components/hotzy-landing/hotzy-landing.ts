@@ -17,10 +17,8 @@ export class HotzyLandingComponent implements AfterViewInit {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-    // spicy particles
     particleArray = Array.from({ length: 25 });
 
-    // PRODUCTS (YOUR REAL DATA)
     products = [
     {
       id: 'snake-bite',
@@ -81,9 +79,7 @@ export class HotzyLandingComponent implements AfterViewInit {
 
   @ViewChildren('revealEl') revealEls!: QueryList<ElementRef>;
 
-    // scroll reveal
     ngAfterViewInit(): void {
-      // run only in browser (fix SSR crash)
       if (!isPlatformBrowser(this.platformId)) return;
 
       const observer = new IntersectionObserver(
